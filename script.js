@@ -10,11 +10,16 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(encodedStr){
-   let decodedArr = []; // Your Result goes here
-  // Only change code below this line
-
-  return ;//return decodedArr
+function rot13(str){
+	let arr = []; // Your Result goes here
+    // Only change code below this line
+    for(let i in str){
+        if(str.charAt(i)==' ')
+        arr.push(' ');
+        else
+        arr.push(lookup[str.charAt(i)])
+    }
+    return arr;
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
